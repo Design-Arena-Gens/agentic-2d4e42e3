@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-family: 'Amiri', serif;
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+    font-size: 1.8rem;
+    color: #87ceeb;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    font-style: italic;
+}
+
+main {
+    margin-bottom: 40px;
+}
+
+.quotes-container {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid rgba(135, 206, 235, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.6s ease-in-out;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-arabic {
+    font-family: 'Amiri', serif;
+    font-size: 1.8rem;
+    color: #ffd700;
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 25px;
+    line-height: 2;
+    padding: 20px;
+    background: rgba(255, 215, 0, 0.05);
+    border-radius: 15px;
+    border-right: 4px solid #ffd700;
+}
+
+.quote-albanian {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border-left: 4px solid #87ceeb;
+}
+
+.quote-context {
+    font-size: 1rem;
+    color: #a0a0a0;
+    font-style: italic;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.nav-btn:hover {
+    background: linear-gradient(135deg, #357abd, #2a5d8f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+}
+
+.nav-btn:disabled {
+    background: rgba(100, 100, 100, 0.5);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.counter {
+    font-size: 1.2rem;
+    color: #87ceeb;
+    font-weight: 600;
+}
+
+.refresh-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.refresh-btn {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.refresh-btn:hover {
+    background: linear-gradient(135deg, #ee5a6f, #d84355);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+}
+
+.refresh-btn:active {
+    transform: scale(0.98);
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bio h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.bio p {
+    color: #c0c0c0;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.3rem;
+    }
+
+    .quote-card {
+        padding: 25px;
+    }
+
+    .quote-arabic {
+        font-size: 1.4rem;
+    }
+
+    .quote-albanian {
+        font-size: 1.1rem;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .nav-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .refresh-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .quote-card {
+        padding: 20px;
+    }
+
+    .quote-arabic {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .quote-albanian {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
